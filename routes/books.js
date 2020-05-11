@@ -34,7 +34,7 @@ router.get("/", async (req, res) => {
 
 router.get("/create", async (req, res, next) => {
   res.render("books/create", {
-    title: "New Book ",
+    title: "Add New Book ",
   });
 });
 
