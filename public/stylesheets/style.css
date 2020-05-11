@@ -1,0 +1,13 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.footer {
+  background: #333232;
+  color: #fff;
+  display: none;
+}
+.footer .footer-copy-right {
+  text-align: center;
+}

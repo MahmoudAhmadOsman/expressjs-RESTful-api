@@ -1,0 +1,78 @@
+<form
+  action="/books/add"
+  method="POST"
+  autocomplete="on"
+  enctype="multipart/form-data"
+>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="title">Book Title</label>
+      <input
+        type="text"
+        class="form-control"
+        name="title"
+        placeholder="Enter book title"
+        required
+      />
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="price">Price</label>
+      <input
+        type="text"
+        class="form-control"
+        name="price"
+        placeholder="$ price"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-3 mb-3">
+      <label for="publishedDate">Published Date</label>
+      <input
+        type="date"
+        class="form-control"
+        name="publishedDate"
+        placeholder="Enter book title"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="coverImagae">Book Cover</label>
+      <input
+        type="file"
+        class="form-control"
+        name="coverImage"
+        placeholder="Book cover"
+        style="border: 2px solid#efeded; min-height: 212px;"
+      />
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="description">Book Description</label>
+      <textarea
+        class="form-control"
+        cols="30"
+        rows="10"
+        name="description"
+        placeholder="Book Description"
+        required
+      ></textarea>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-10 mb-3">
+      <button
+        class="btn btn-success text-uppercase"
+        type="submit"
+        style="margin-top: 8px;"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</form>

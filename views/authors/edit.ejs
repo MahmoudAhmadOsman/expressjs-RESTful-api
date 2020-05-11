@@ -1,0 +1,66 @@
+<section class="container" style="margin-top: 50px;">
+  <form action="/authors/<%=author.id  %>?_method=PUT" method="POST">
+    <h1 class="text-danger"><%= title %></h1>
+    <hr />
+    <div class="row">
+      <div class="col-md-4">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          class="form-control input-lg"
+          name="name"
+          placeholder="Enter your full name"
+          value="<%= author.name  %> "
+        />
+      </div>
+      <div class="col-md-4">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          class="form-control input-lg"
+          name="email"
+          placeholder="Enter your email address"
+          value="<%= author.email  %> "
+        />
+      </div>
+      <div class="col-md-4">
+        <label for="email">Phone Number</label>
+        <input
+          type="text"
+          class="form-control input-lg"
+          name="phone"
+          placeholder="Enter your phone number"
+          value="<%= author.phone  %> "
+        />
+      </div>
+    </div>
+
+    <!-- Second row -->
+    <div class="row">
+      <div class="col-md-6">
+        <label for="address">Address</label>
+        <input
+          type="text"
+          class="form-control input-lg"
+          name="address"
+          placeholder="Enter your address"
+          value="<%= author.address  %> "
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="message">Message</label>
+        <textarea
+          class="form-control input-lg"
+          name="message"
+          cols="5"
+          rows="5"
+          placeholder="Enter your message"
+        >
+        <%= author.message %> 
+        </textarea>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a href="/authors" class="btn btn-info">Cancel</a>
+  </form>
+</section>
