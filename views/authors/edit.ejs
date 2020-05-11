@@ -34,10 +34,11 @@
         />
       </div>
     </div>
+    <br />
 
     <!-- Second row -->
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <label for="address">Address</label>
         <input
           type="text"
@@ -46,20 +47,25 @@
           placeholder="Enter your address"
           value="<%= author.address  %> "
         />
+        <br />
       </div>
-      <div class="col-md-6">
-        <label for="message">Message</label>
-        <textarea
-          class="form-control input-lg"
-          name="message"
-          cols="5"
-          rows="5"
-          placeholder="Enter your message"
-        >
+      <div class="row">
+        <div class="col-md-12">
+          <label for="message">Message</label>
+          <textarea
+            class="form-control input-lg"
+            name="message"
+            cols="5"
+            rows="5"
+            placeholder="Enter your message"
+          >
         <%= author.message %> 
-        </textarea>
+        </textarea
+          >
+        </div>
       </div>
     </div>
+    <br />
     <button type="submit" class="btn btn-primary">Update</button>
     <a href="/authors" class="btn btn-info">Cancel</a>
   </form>
