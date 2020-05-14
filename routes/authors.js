@@ -71,7 +71,7 @@ router.put("/:id", async (req, res) => {
   try {
     author = await Author.findById(req.params.id);
     (author.name = req.body.name),
-      (author.email = req.body.emai),
+      (author.email = req.body.email),
       (author.phone = req.body.phone);
     (author.address = req.body.address),
       (author.message = req.body.message),

@@ -5,15 +5,9 @@ body {
 
 .footer {
   background: #333232;
-  min-height: 150px;
   color: #fff;
-  left: 0;
-  right: 0;
-  position: absolute;
-  margin-top: 20%;
+  display: none;
 }
-
 .footer .footer-copy-right {
   text-align: center;
-  line-height: 150px;
 }

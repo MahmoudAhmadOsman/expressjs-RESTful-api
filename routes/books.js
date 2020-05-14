@@ -34,7 +34,7 @@ router.get("/", async (req, res) => {
 
 router.get("/create", async (req, res, next) => {
   res.render("books/create", {
-    title: "Add New Book ",
+    title: "New Book ",
   });
 });
 
@@ -59,6 +59,30 @@ router.post("/add", upload.single("coverImage"), (req, res, next) => {
     } else {
       res.redirect("/books");
     }
+  });
+});
+
+//Show Book page
+router.get("/:id/show", function (req, res) {
+  Book.findById(req.params.id, function (err, book) {
+    // res.send("Show book");
+    // return;
+    res.render("books/show", {
+      title: "Book Details",
+      book: book,
+    });
+  });
+});
+
+//Edit Book page
+router.get("/:id/edit", function (req, res) {
+  Book.findById(req.params.id, function (err, book) {
+    // res.send("edit book");
+    // return;
+    res.render("books/edit", {
+      title: "Edit Book",
+      book: book,
+    });
   });
 });
 

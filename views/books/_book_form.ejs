@@ -11,7 +11,7 @@
         type="text"
         class="form-control"
         name="title"
-        placeholder="Enter book title"
+        value="<%= book.title%>"
         required
       />
     </div>
@@ -21,7 +21,7 @@
         type="text"
         class="form-control"
         name="price"
-        placeholder="$ price"
+        value="<%= book.price%>"
         required
       />
     </div>
@@ -34,7 +34,7 @@
         type="date"
         class="form-control"
         name="publishedDate"
-        placeholder="Enter book title"
+        value="<%= book.date%>"
         required
       />
     </div>
@@ -61,7 +61,10 @@
         name="description"
         placeholder="Book Description"
         required
-      ></textarea>
+      >
+      <%= book.description%>
+    </textarea
+      >
     </div>
   </div>
   <div class="form-row">
