@@ -11,6 +11,7 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #f5f2f27a;
+  overflow-x: hidden;
 }
 /* Start of main navigation  */
 .main_navigation .navbar-inverse {
@@ -55,7 +56,9 @@ body {
 }
 /* End of Books route style */
 /* Start of registration form */
-
+.signup-form .input-lg {
+  font-size: 13px;
+}
 .register_users {
   position: relative;
   margin-top: 60px;
@@ -76,11 +79,24 @@ body {
   max-height: 110px;
 }
 /* Start of footer  */
-.footer {
+.footer,
+.footer .footer-copy-right {
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  display: block;
   background: #333232;
   color: #fff;
-  display: none;
+  display: block;
+}
+.footer img {
+  height: 80px;
 }
 .footer .footer-copy-right {
   text-align: center;
+  background-color: #444;
+  height: 25px;
 }
