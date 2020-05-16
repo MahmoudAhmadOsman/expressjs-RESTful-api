@@ -46,13 +46,24 @@ router.post("/add", function (req, res, next) {
         errorMessage: " Error occurred",
       });
     } else {
+      // res.redirect(`/authors/${author.id}`);
+      //res.redirect("/authors/show");
+
       res.redirect("/authors");
     }
   });
 });
 
 //Show page
-router.get("/:id", function (req, res) {});
+// router.get("/:id", function (req, res) {});
+router.get("/:id/show", function (req, res) {
+  Author.findById(req.params.id, function (err, author) {
+    res.render("authors/show", {
+      title: "Details of ",
+      author: author,
+    });
+  });
+});
 
 //Edit page
 router.get("/:id/edit", function (req, res) {

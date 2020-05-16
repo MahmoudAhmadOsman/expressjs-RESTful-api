@@ -12,36 +12,19 @@
             <th>Phone</th>
             <th>Address</th>
             <th>Short Bio</th>
-            <th>Actions</th>
           </tr>
         </thead>
         <% authors.forEach(author => { %>
 
         <tbody>
           <tr>
-            <td><%= author.name %></td>
+            <td>
+              <a href="/authors/<%= author.id %>/show"><%= author.name %></a>
+            </td>
             <td><%= author.email %></td>
             <td><%= author.phone %></td>
             <td><%= author.address %></td>
             <td><%= author.message %></td>
-            <td>
-              <a
-                href="/authors/<%= author.id %>/edit"
-                class="btn btn-info btn-sm"
-              >
-                <i class="fa fa-trash"><b> Edit</b></i>
-              </a>
-            </td>
-            <td>
-              <form
-                action="/authors/<%= author.id  %>?_method=DELETE "
-                method="POST"
-              >
-                <button type="submit" class="btn btn-danger btn-sm">
-                  <i class="fa fa-trash"><b> Delete</b></i>
-                </button>
-              </form>
-            </td>
           </tr>
         </tbody>
 

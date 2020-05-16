@@ -1,9 +1,48 @@
-<section class="all_authors" style="margin-top: 80px;">
+<section class="author_details">
   <div class="container">
     <div class="row">
-      <%- include('_search_author') %>
-      <h1 class="text-danger"><%= title %></h1>
-      <hr />
+      <div class="col-md-6 col-md-offset-4">
+        <div class="thumbnail">
+          <img src="/images/no-image.png" alt="<%= author.name %> " />
+          <div class="caption">
+            <h3><b><%= title %></b> <%= author.name %></h3>
+            <div class="well well-sm">
+              <b>Email: </b>
+              <%= author.email %>
+            </div>
+            <div class="well well-sm">
+              <b>Phone: </b>
+              <%= author.phone %>
+            </div>
+            <div class="well well-sm">
+              <b>Address: </b>
+              <%= author.address %>
+            </div>
+            <div class="well well-sm">
+              <b>Short Bio: </b>
+              <%= author.message %>
+            </div>
+
+            <div class="well well-sm">
+              <a
+                href="/authors/<%= author.id %>/edit"
+                class="btn btn-info btn-sm btn-block"
+              >
+                <i class="fa fa-trash"><b> Edit</b></i>
+              </a>
+              <br />
+              <form
+                action="/authors/<%= author.id  %>?_method=DELETE "
+                method="POST"
+              >
+                <button type="submit" class="btn btn-danger btn-sm btn-block">
+                  <i class="fa fa-trash"><b> Delete</b></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

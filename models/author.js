@@ -21,6 +21,19 @@ let authorSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  slug: {
+    type: String,
+    require: true,
+    unique: true,
+  },
+});
+
+//Pretify URL
+authorSchema.pre("validate", function (next) {
+  if (this.title) {
+    this.slug = slugify(this.title, { lower: true, strict: true });
+  }
+  next();
 });
 
 module.exports = mongoose.model("Author", authorSchema);

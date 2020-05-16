@@ -2,14 +2,15 @@ var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
-const expressLayouts = require("express-ejs-layouts");
-const mongoose = require("mongoose");
-const methodOverride = require("method-override");
-
+var expressLayouts = require("express-ejs-layouts");
+var mongoose = require("mongoose");
+var methodOverride = require("method-override");
+const multer = require("multer");
 var logger = require("morgan");
+var slugify = require("slugify");
 
 //Bring the Database
-const config = require("./config/database");
+var config = require("./config/database");
 
 mongoose.connect(config.database, {
   useNewUrlParser: true,
@@ -48,15 +49,17 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
 
 app.use("/", indexRouter);
+//custom Routes
 var authorRouter = require("./routes/authors");
-//Books
+
 var bookRouter = require("./routes/books");
 var usersRouter = require("./routes/users");
+var galleryRouter = require("./routes/gallery");
 
 app.use("/users", usersRouter);
-//Books Route
 app.use("/authors", authorRouter);
 app.use("/books", bookRouter);
+app.use("/gallery", galleryRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
