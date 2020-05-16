@@ -29,11 +29,11 @@ let authorSchema = new mongoose.Schema({
 });
 
 //Pretify URL
-authorSchema.pre("validate", function (next) {
-  if (this.title) {
-    this.slug = slugify(this.title, { lower: true, strict: true });
-  }
-  next();
-});
+// authorSchema.pre("validate", function (next) {
+//   if (this.name) {
+//     this.slug = slugify(this.name, { lower: true, strict: true });
+//   }
+//   next();
+// });
 
 module.exports = mongoose.model("Author", authorSchema);

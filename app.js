@@ -5,7 +5,7 @@ var cookieParser = require("cookie-parser");
 var expressLayouts = require("express-ejs-layouts");
 var mongoose = require("mongoose");
 var methodOverride = require("method-override");
-const multer = require("multer");
+var multer = require("multer");
 var logger = require("morgan");
 var slugify = require("slugify");
 

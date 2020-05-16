@@ -8,11 +8,16 @@
   -o-box-sizing: border-box;
 }
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #f5f2f27a;
   overflow-x: hidden;
 }
+/* Start of main contnet style  */
+.main-content {
+  margin-top: 50px;
+}
+/* End of main contnet style  */
+
 /* Start of main navigation  */
 .main_navigation .navbar-inverse {
   background-color: #4e204e;
@@ -46,6 +51,9 @@ body {
 /* End of main navigation  */
 
 /* Start of Author style */
+.all_authors {
+  margin-top: 50px;
+}
 .c_new_author {
   margin-top: auto;
 }
@@ -53,6 +61,7 @@ body {
 /* Start of Books route style */
 .all_books {
   background-color: #fff;
+  margin-top: 50px;
 }
 /* End of Books route style */
 /* Start of registration form */
@@ -101,6 +110,7 @@ body {
 }
 .author_details .thumbnail {
   border-radius: 0px;
+  background-color: #f9f9f9;
 }
 .author_details .thumbnail img {
   max-width: 250px;
@@ -110,13 +120,10 @@ body {
 /* End of author style  */
 
 /* Start of footer  */
-.footer {
+/* .footer {
   width: 100%;
   height: 10vh;
-  /* position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%; */
+ 
 
   background: #333232;
   color: #fff;
@@ -130,4 +137,100 @@ body {
   text-align: center;
 
   height: 25px;
+} */
+/*Start of footer section*/
+
+.footer {
+  background-color: #272727;
+  color: #aaa;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
 }
+
+.footer h3 {
+  color: #607d8b;
+  letter-spacing: 1px;
+  margin: 30px 0 20px;
+}
+
+.footer .three-columns {
+  overflow: hidden;
+}
+
+.footer .three-columns li {
+  width: 33.3333%;
+  float: left;
+  padding: 3px 0;
+  margin-bottom: 45px;
+  font-size: 14px;
+}
+
+.footer .three-columns a:hover {
+  color: #488ce8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer .social-list {
+  overflow: hidden;
+  margin: 20px 0 10px;
+}
+
+.footer .social-list li {
+  float: left;
+  margin-right: 10px;
+  filter: alpha(opacity=70);
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.footer .social-list .fa-github {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  font-size: 37px;
+  margin-top: -4px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.footer .social-list .fa-github:hover,
+.footer .social-list li:hover {
+  opacity: 1;
+  transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+
+.footer a {
+  color: #aaa;
+}
+
+.footer li:hover {
+  color: #f16331;
+  text-decoration: underline;
+}
+
+.footer .img-thumbnail {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #444;
+  margin-bottom: 5px;
+}
+
+.footer-copyright {
+  background-color: #333;
+  color: #aaa;
+  min-height: 20px;
+  padding: 15px 0;
+  font-size: 9px;
+}
+
+/*End of footer section*/

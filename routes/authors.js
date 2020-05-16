@@ -46,9 +46,6 @@ router.post("/add", function (req, res, next) {
         errorMessage: " Error occurred",
       });
     } else {
-      // res.redirect(`/authors/${author.id}`);
-      //res.redirect("/authors/show");
-
       res.redirect("/authors");
     }
   });
@@ -64,6 +61,15 @@ router.get("/:id/show", function (req, res) {
     });
   });
 });
+
+// router.get("/:slug/:id", function (req, res) {
+//   Author.find({ slug: req.params.slug }, function (err, author) {
+//     res.render("authors/show", {
+//       title: "Details of ",
+//       author: author,
+//     });
+//   });
+// });
 
 //Edit page
 router.get("/:id/edit", function (req, res) {

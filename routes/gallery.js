@@ -1,5 +1,5 @@
 var express = require("express");
-const picModel = require("../models/gallery");
+const Gallery = require("../models/gallery");
 var router = express.Router();
 
 router.get("/", function (req, res, next) {
@@ -17,8 +17,5 @@ router.get("/create", function (req, res, next) {
 });
 
 //Post
-// router.post("/upload", upload.single("image"), async function (req, res) {
-//   await console.log("post");
-// });
 
 module.exports = router;
