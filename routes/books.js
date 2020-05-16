@@ -32,9 +32,10 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/create", async (req, res, next) => {
+// Create New Book
+router.get("/create", function (req, res, next) {
   res.render("books/create", {
-    title: "New Book ",
+    title: "Create New Book ",
   });
 });
 
@@ -87,5 +88,22 @@ router.get("/:id/edit", function (req, res) {
 });
 
 //Delete
+
+router.delete("/:id", async (req, res) => {
+  let book;
+  try {
+    book = await Book.findById(req.params.id);
+
+    await book.remove();
+
+    res.redirect(`/books`);
+  } catch {
+    if (book == null) {
+      res.redirect("/books");
+    } else {
+      res.redirect(`/book/${book.id}`);
+    }
+  }
+});
 
 module.exports = router;

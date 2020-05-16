@@ -51,6 +51,7 @@ app.use("/", indexRouter);
 var authorRouter = require("./routes/authors");
 //Books
 var bookRouter = require("./routes/books");
+var usersRouter = require("./routes/users");
 
 app.use("/users", usersRouter);
 //Books Route

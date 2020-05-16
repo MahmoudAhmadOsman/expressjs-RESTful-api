@@ -90,8 +90,8 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-//Delete page
-// Install method override library
+//Delete Books
+
 router.delete("/:id", async (req, res) => {
   let author;
   try {

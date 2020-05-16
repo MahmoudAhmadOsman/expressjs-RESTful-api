@@ -1,0 +1,75 @@
+<section class="container">
+  <div class="signup-form">
+    <form action="#" method="POST">
+      <h2 class="text-info"><%= title %></h2>
+      <hr />
+      <p class="text-muted">
+        Create your account. It's free and only takes a minute.
+      </p>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-xs-6">
+            <input
+              type="text"
+              class="form-control input-lg"
+              name="first_name"
+              placeholder="Enter your first Name"
+              required="required"
+            />
+          </div>
+          <div class="col-xs-6">
+            <input
+              type="text"
+              class="form-control input-lg"
+              name="last_name"
+              placeholder="Enter your last Name"
+              required="required"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-control input-lg"
+          name="email"
+          placeholder="Enter your email address"
+          required="required"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          class="form-control input-lg"
+          name="password"
+          placeholder="Password"
+          required="required"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          class="form-control input-lg"
+          name="confirm_password"
+          placeholder="Confirm Password"
+          required="required"
+        />
+      </div>
+      <div class="form-group">
+        <label class="checkbox-inline"
+          ><input type="checkbox" required="required" /> I accept the
+          <a href="#">Terms of Use</a> &amp;
+          <a href="#">Privacy Policy</a></label
+        >
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success btn-lg">
+          Register Now
+        </button>
+      </div>
+    </form>
+    <div class="text-center">
+      Already have an account? <a href="/users/login">Sign in</a>
+    </div>
+  </div>
+</section>

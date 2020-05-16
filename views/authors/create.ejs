@@ -1,13 +1,15 @@
-<section class="container" style="margin-top: 50px;">
-  <div class="create_form" style="max-width: 75%; margin: auto;">
-    <h1 class="text-danger"><%= title %></h1>
-    <hr />
+<section class="c_new_author">
+  <div class="container">
+    <div class="create_form" style="max-width: 75%; margin: auto;">
+      <h1 class="text-danger"><%= title %></h1>
+      <hr />
 
-    <form action="/authors/add" method="POST">
-      <%- include('_author_form') %>
+      <form action="/authors/add" method="POST">
+        <%- include('_author_form') %>
 
-      <button type="submit" class="btn btn-primary">New Author</button>
-      <a href="/authors" class="btn btn-danger">Cancel</a>
-    </form>
+        <button type="submit" class="btn btn-primary">New Author</button>
+        <a href="/authors" class="btn btn-danger">Cancel</a>
+      </form>
+    </div>
   </div>
 </section>

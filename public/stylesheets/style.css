@@ -1,8 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f5f2f27a;
 }
+/* Start of main navigation  */
+.main_navigation .navbar-inverse {
+  background-color: #4e204e;
+  border-color: #4e204e;
+}
+.main_navigation .navbar-inverse .navbar-brand {
+  color: #ffffff;
+}
+.main_navigation .navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > .open > a:hover {
+  color: #fff;
+  background-color: #6d356d;
+}
+.main_navigation .navbar-nav > li > .dropdown-menu {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  min-width: 220px;
+  background: #b982b963;
+  /* min-height: 220px; */
+}
+.main_navigation .dropdown-menu > li > a {
+  font-weight: bold;
+  color: #000;
+}
+.main_navigation .navbar-inverse .navbar-nav > li > a {
+  font-weight: bold;
+  color: #fff;
+}
+/* End of main navigation  */
 
+/* Start of Author style */
+.c_new_author {
+  margin-top: auto;
+}
+/* End of Author style */
+/* Start of Books route style */
+.all_books {
+  background-color: #fff;
+}
+/* End of Books route style */
+/* Start of registration form */
+
+.register_users {
+  position: relative;
+  margin-top: 60px;
+}
+.register_users h3 {
+  text-align: center;
+}
+.register_users .fa-unlock {
+  font-size: 75px;
+  color: #21c563;
+  text-align: center;
+  display: block;
+}
+.register_users .thumbnail {
+  min-height: 350px;
+}
+.register_users .thumbnail img {
+  max-height: 110px;
+}
+/* Start of footer  */
 .footer {
   background: #333232;
   color: #fff;
