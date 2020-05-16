@@ -1,0 +1,30 @@
+<section class="login_form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-4">
+        <h1 class="text-info"><%= title %></h1>
+        <hr />
+        <form action="/users/add">
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control input-lg" name="email" />
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input
+              type="password"
+              class="form-control input-lg"
+              name="password"
+            />
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" /> Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-info btn-lg btn-block">
+            <b class="sub">Submit</b>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

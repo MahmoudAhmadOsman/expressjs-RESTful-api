@@ -58,6 +58,8 @@ body {
 /* Start of registration form */
 .signup-form .input-lg {
   font-size: 13px;
+  border-radius: 0px;
+  background-color: #34383833;
 }
 .register_users {
   position: relative;
@@ -78,6 +80,21 @@ body {
 .register_users .thumbnail img {
   max-height: 110px;
 }
+/* End of registration form */
+/* Start of login form */
+
+.login_form {
+  margin-top: 60px;
+}
+.login_form .form-control {
+  border-radius: 0px;
+  background-color: #34383833;
+}
+.login_form .sub {
+  text-transform: uppercase;
+}
+/* End of login form */
+
 /* Start of footer  */
 .footer,
 .footer .footer-copy-right {
