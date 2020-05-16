@@ -11,7 +11,7 @@ var slugify = require("slugify");
 
 //Bring the Database
 var config = require("./config/database");
-//added for Heruku
+//2. added for Heruku
 mongoose.connect(process.env.MONGGOOD_URL || config.database, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -33,8 +33,8 @@ var usersRouter = require("./routes/users");
 
 var app = express();
 
-//for heruku
-const PORT = process.env.PORT || 8080;
+//1. for heruku
+const PORT = process.env.PORT || 5000;
 
 // view engine setup
 app.set("view engine", "ejs");
@@ -79,5 +79,10 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
+
+//3. for Heruku
+// if(process.env.NODE_ENV === 'production'){
+
+// }
 
 module.exports = app;
