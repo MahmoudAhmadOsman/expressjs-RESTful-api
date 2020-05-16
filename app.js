@@ -34,7 +34,7 @@ var usersRouter = require("./routes/users");
 var app = express();
 
 //1. for heruku
-const PORT = process.env.PORT || 5000;
+//const PORT = process.env.PORT || 5000;
 
 // view engine setup
 app.set("view engine", "ejs");
