@@ -7,11 +7,6 @@ router.get("/", function (req, res, next) {
   res.redirect("/users/register");
 });
 
-// router.get("/", function (req, res, next) {
-//   res.render("users/index", {
-//     title: "Register Forms ",
-//   });
-// });
 router.get("/register", function (req, res, next) {
   res.render("users/register", {
     title: "Register New User ",
