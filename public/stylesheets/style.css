@@ -18,7 +18,9 @@ body {
 }
 .main-content,
 .all_authors,
-.all_books {
+.all_books,
+.login_form,
+.signup-form {
   height: 1200px;
 }
 /* End of main contnet style  */
@@ -70,6 +72,9 @@ body {
 }
 /* End of Books route style */
 /* Start of registration form */
+.signup-form {
+  margin-top: 60px;
+}
 .signup-form .input-lg {
   font-size: 13px;
   border-radius: 0px;
@@ -98,7 +103,7 @@ body {
 /* Start of login form */
 
 .login_form {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 .login_form .form-control {
   border-radius: 0px;
