@@ -16,6 +16,10 @@ mongoose.connect(process.env.MONGGOOD_URL || config.database, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+mongoose.set("useNewUrlParser", true);
+mongoose.set("useFindAndModify", false);
+mongoose.set("useCreateIndex", true);
+
 let db = mongoose.connection;
 
 // Check database connection
@@ -34,7 +38,8 @@ var usersRouter = require("./routes/users");
 var app = express();
 
 //1. for heruku
-//const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
+app.listen(port);
 
 // view engine setup
 app.set("view engine", "ejs");
