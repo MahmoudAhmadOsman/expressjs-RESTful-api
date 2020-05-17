@@ -71,6 +71,10 @@ body {
   background-color: #fff;
   margin-top: 50px;
 }
+.book_create {
+  margin-top: 45px;
+  margin-bottom: 120px;
+}
 /* End of Books route style */
 /* Start of registration form */
 .signup-form {
