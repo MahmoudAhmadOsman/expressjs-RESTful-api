@@ -117,6 +117,7 @@ body {
 /* Start of author style  */
 .author_details {
   position: relative;
+  margin-top: 58px;
 }
 .author_details .thumbnail {
   border-radius: 0px;
