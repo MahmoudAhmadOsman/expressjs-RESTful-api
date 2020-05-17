@@ -143,6 +143,10 @@ body {
 .footer {
   background-color: #272727;
   color: #aaa;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   /* padding-top: 20px;
   padding-bottom: 20px; */
 }
