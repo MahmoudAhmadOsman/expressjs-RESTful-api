@@ -262,11 +262,14 @@ body {
 }
 
 .footer-copyright {
-  background-color: #333;
   color: #aaa;
-  min-height: 20px;
-  padding: 15px 0;
+  height: 30px;
+  background-color: #444;
+  width: 100%;
+  position: absolute;
+  left: 0;
   font-size: 9px;
+  line-height: 30px;
 }
 
 /*End of footer section*/
