@@ -73,7 +73,11 @@ body {
 /* End of Books route style */
 /* Start of registration form */
 .signup-form {
-  margin-top: 60px;
+  margin-top: 45px;
+  height: 100vh;
+  display: block;
+  background-color: #381d38;
+  background-image: linear-gradient(to right, #cac9ca, #381d38);
 }
 .signup-form .input-lg {
   font-size: 13px;
@@ -103,7 +107,15 @@ body {
 /* Start of login form */
 
 .login_form {
-  margin-top: 50px;
+  margin-top: 40px;
+  width: auto;
+  height: 100vh;
+
+  display: block;
+  background-color: #381d38;
+  background-image: linear-gradient(to right, #cac9ca, #381d38);
+  overflow: hidden;
+  position: relative;
 }
 .login_form .form-control {
   border-radius: 0px;
@@ -115,6 +127,7 @@ body {
 /* End of login form */
 
 /* Start of author style  */
+
 .author_details {
   position: relative;
   margin-top: 58px;
