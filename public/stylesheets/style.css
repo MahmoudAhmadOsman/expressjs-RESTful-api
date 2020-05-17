@@ -16,6 +16,11 @@ body {
 .main-content {
   margin-top: 50px;
 }
+.main-content,
+.all_authors,
+.all_books {
+  height: 1200px;
+}
 /* End of main contnet style  */
 
 /* Start of main navigation  */
@@ -146,9 +151,6 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
 }
 
 .footer h3 {
