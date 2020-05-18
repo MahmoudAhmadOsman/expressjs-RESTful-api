@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
     const authors = await Author.find(searchOptions);
 
     res.render("authors/index", {
-      title: "All Authors ",
+      title: "All Authors",
       authors: authors,
       searchOptions: req.query,
     });
@@ -23,15 +23,17 @@ router.get("/", async (req, res) => {
   }
 });
 
-/*Author Routes*/
+/*load new Author form*/
+
 router.get("/create", function (req, res, next) {
   res.render("authors/create", {
-    title: "Create New Author ",
+    title: "Add New Author ",
   });
 });
 
 //Create page
 router.post("/add", function (req, res, next) {
+  //res.send("add new author");
   const author = new Author({
     name: req.body.name,
     email: req.body.email,
@@ -43,7 +45,6 @@ router.post("/add", function (req, res, next) {
     if (err) {
       res.render("authors/create", {
         author: author,
-        errorMessage: " Error occurred",
       });
     } else {
       res.redirect("/authors");

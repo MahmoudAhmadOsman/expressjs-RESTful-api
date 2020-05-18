@@ -17,14 +17,9 @@ const upload = multer({
 /* Book Routes */
 router.get("/", async (req, res) => {
   try {
-    const books = await Book.find()
-      .sort({ createdAt: "desc" })
-      .limit(10)
-      .exec();
-
+    const books = await Book.find().sort({ createdAt: "desc" }).limit(8).exec();
     res.render("books/index", {
       title: "All Books ",
-
       books: books,
     });
   } catch {
@@ -39,9 +34,7 @@ router.get("/create", function (req, res, next) {
   });
 });
 
-
 //Add or Create New Author
-
 router.post("/add", upload.single("coverImage"), (req, res, next) => {
   const fileName = req.file != null ? req.file.fileName : null;
   const book = new Book({

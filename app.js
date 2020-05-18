@@ -1,5 +1,6 @@
 var createError = require("http-errors");
 var express = require("express");
+var partials = require("express-partials");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var expressLayouts = require("express-ejs-layouts");
@@ -73,6 +74,9 @@ app.use("/gallery", galleryRouter);
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
+// partials
+app.use(partials());
 
 // error handler
 app.use(function (err, req, res, next) {

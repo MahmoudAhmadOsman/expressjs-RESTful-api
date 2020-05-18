@@ -75,6 +75,10 @@ body {
   margin-top: 45px;
   margin-bottom: 120px;
 }
+.edit_book {
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
 /* End of Books route style */
 /* Start of registration form */
 .signup-form {
@@ -146,6 +150,12 @@ body {
   border-radius: 50%;
 }
 
+.edit_author {
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+/* End of author style  */
 /* Start of gallery page */
 
 .gallery_page {

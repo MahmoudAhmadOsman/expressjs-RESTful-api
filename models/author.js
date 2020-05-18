@@ -1,15 +1,20 @@
 const mongoose = require("mongoose");
-
 let authorSchema = new mongoose.Schema({
   name: {
     type: String,
     require: true,
   },
+
+  email: {
+    type: String,
+    require: true,
+    unique: true,
+  },
   phone: {
     type: String,
     require: true,
   },
-  email: {
+  address: {
     type: String,
     require: true,
   },
@@ -21,19 +26,6 @@ let authorSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  slug: {
-    type: String,
-    require: true,
-    unique: true,
-  },
 });
-
-//Pretify URL
-// authorSchema.pre("validate", function (next) {
-//   if (this.name) {
-//     this.slug = slugify(this.name, { lower: true, strict: true });
-//   }
-//   next();
-// });
 
 module.exports = mongoose.model("Author", authorSchema);

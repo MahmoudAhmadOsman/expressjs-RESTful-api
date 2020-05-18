@@ -31,10 +31,11 @@
     <div class="col-md-3 mb-3">
       <label for="publishedDate">Published Date</label>
       <input
-        type="date"
+        type="text"
         class="form-control"
         name="publishedDate"
-        value="<%= book.date%>"
+        placeholder="Ex. 12/30/2012"
+        value="<%= book.publishedDate.toLocaleDateString()%>"
       />
     </div>
   </div>

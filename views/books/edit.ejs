@@ -1,11 +1,13 @@
-<section class="container" style="margin-top: 50px;">
-  <div class="row">
-    <h1 class="text-danger">
-      <%= title %> of <u><i><%= book.title %></i></u>
-    </h1>
-    <hr />
-    <div class="col-md-8">
-      <%- include('_book_form') %>
+<section class="edit_book">
+  <div class="container">
+    <div class="row">
+      <h1 class="text-danger">
+        <%= title %> of <u><i><%= book.title %></i></u>
+      </h1>
+      <hr />
+      <div class="col-md-8">
+        <%- include('_edit_book_form') %>
+      </div>
     </div>
   </div>
 </section>
