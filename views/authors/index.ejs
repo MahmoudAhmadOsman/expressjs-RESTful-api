@@ -1,7 +1,6 @@
 <section class="all_authors">
   <div class="container">
     <div class="row">
-      <!-- include('_search_author')  -->
       <h1 class="text-danger"><%= title %></h1>
       <hr />
       <table class="table table-hover">
@@ -12,6 +11,7 @@
             <th>Phone</th>
             <th>Address</th>
             <th>Short Bio</th>
+            <th>Member Since</th>
           </tr>
         </thead>
         <% authors.forEach(author => { %>
@@ -25,6 +25,7 @@
             <td><%= author.phone %></td>
             <td><%= author.address %></td>
             <td><%= author.message %></td>
+            <td><%= author.date.toLocaleDateString() %></td>
           </tr>
         </tbody>
 

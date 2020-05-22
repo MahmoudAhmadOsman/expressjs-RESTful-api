@@ -8,7 +8,6 @@ let authorSchema = new mongoose.Schema({
   email: {
     type: String,
     require: true,
-    unique: true,
   },
   phone: {
     type: String,
@@ -18,13 +17,14 @@ let authorSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  address: {
-    type: String,
-    require: true,
-  },
+
   message: {
     type: String,
     require: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
   },
 });
 
