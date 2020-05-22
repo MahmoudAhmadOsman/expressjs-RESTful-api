@@ -35,6 +35,10 @@ db.on("error", function (err) {
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var authorRouter = require("./routes/authors");
+var bookRouter = require("./routes/books");
+var usersRouter = require("./routes/users");
+var galleryRouter = require("./routes/gallery");
 
 var app = express();
 
@@ -47,8 +51,6 @@ app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.set("layout", "layouts/layout");
 app.use(expressLayouts);
-// app.set("views", path.join(__dirname, "views"));
-// app.set("view engine", "ejs");
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -58,12 +60,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
 
 app.use("/", indexRouter);
-//custom Routes
-var authorRouter = require("./routes/authors");
-
-var bookRouter = require("./routes/books");
-var usersRouter = require("./routes/users");
-var galleryRouter = require("./routes/gallery");
+//custom Routes -moved to the top
 
 app.use("/users", usersRouter);
 app.use("/authors", authorRouter);

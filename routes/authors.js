@@ -4,19 +4,34 @@ const router = express.Router();
 
 /* Authors index */
 
-router.get("/", async (req, res) => {
-  // Search Author name
-  let searchOptions = {};
-  if (req.query != null && req.query.name !== "") {
-    searchOptions.name = new RegExp(req.query.name, "i");
-  }
-  try {
-    const authors = await Author.find(searchOptions);
+// router.get("/", async (req, res) => {
+//   // Search Author name
+//   let searchOptions = {};
+//   if (req.query != null && req.query.name !== "") {
+//     searchOptions.name = new RegExp(req.query.name, "i");
+//   }
+//   try {
+//     const authors = await Author.find(searchOptions);
 
+//     res.render("authors/index", {
+//       title: "All Authors",
+//       authors: authors,
+//       searchOptions: req.query,
+//     });
+//   } catch {
+//     res.redirect("/");
+//   }
+// });
+
+router.get("/", async (req, res) => {
+  try {
+    const authors = await Author.find()
+      .sort({ createdAt: "desc" })
+      .limit(8)
+      .exec();
     res.render("authors/index", {
-      title: "All Authors",
+      title: "All Authors ",
       authors: authors,
-      searchOptions: req.query,
     });
   } catch {
     res.redirect("/");
@@ -33,15 +48,16 @@ router.get("/create", function (req, res, next) {
 
 //Create page
 router.post("/add", function (req, res, next) {
-  //res.send("add new author");
-  const author = new Author({
-    name: req.body.name,
-    email: req.body.email,
-    phone: req.body.phone,
-    address: req.body.address,
-    message: req.body.message,
-  });
-  author.save((err, newAuthor) => {
+  //res.send("Add new book");
+  let author = new Author();
+  author.name = req.body.name;
+  author.email = req.body.email;
+  author.phone = req.body.phone;
+  author.address = req.body.address;
+  author.message = req.body.message;
+
+  // Check for error
+  author.save(function (err) {
     if (err) {
       res.render("authors/create", {
         author: author,
@@ -53,7 +69,7 @@ router.post("/add", function (req, res, next) {
 });
 
 //Show page
-// router.get("/:id", function (req, res) {});
+
 router.get("/:id/show", function (req, res) {
   Author.findById(req.params.id, function (err, author) {
     res.render("authors/show", {
