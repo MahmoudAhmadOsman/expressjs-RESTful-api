@@ -69,7 +69,7 @@ app.use("/gallery", galleryRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  next(createError(404).render("404.ejs"));
+  next(createError(404));
 });
 
 // partials
@@ -83,7 +83,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render("error").render("404.ejs");
+  res.render("error");
 });
 
 //3. for Heruku
