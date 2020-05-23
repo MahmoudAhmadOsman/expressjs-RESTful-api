@@ -1,5 +1,5 @@
 module.exports = {
   database:
-    "mongodb+srv://atlasbookshop:atlasbookshop2020@cluster0-xtbzt.mongodb.net/test?retryWrites=true&w=majority",
+    "mongodb://bilaal:bilal1996@@ds141534.mlab.com:41534/heroku_znh8b0c6",
   secret: "yoursecret",
 };
