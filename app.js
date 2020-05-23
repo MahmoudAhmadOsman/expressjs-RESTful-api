@@ -14,7 +14,7 @@ var slugify = require("slugify");
 var config = require("./config/database");
 //2. added for Heruku
 mongoose.connect(
-  process.env.MONGGOOD_URL ||
+  process.env.MONGODB_URL ||
     "mongodb://bilaal:bilal1996@@ds141534.mlab.com:41534/heroku_znh8b0c6",
   {
     useNewUrlParser: true,
