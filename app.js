@@ -13,14 +13,19 @@ var slugify = require("slugify");
 //Bring the Database
 var config = require("./config/database");
 //2. added for Heruku
-mongoose.connect(
-  process.env.MONGODB_URL ||
-    "mongodb://bilaal:bilal1996@@ds141534.mlab.com:41534/heroku_znh8b0c6",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+// mongoose.connect(
+//   process.env.MONGODB_URL ||
+//     "",
+//   {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   }
+// );
+
+mongoose.connect(config.database, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 mongoose.set("useNewUrlParser", true);
 mongoose.set("useFindAndModify", false);
 mongoose.set("useCreateIndex", true);
