@@ -1,4 +1,6 @@
-## Express js, ejs and Mongodb
+## Project
+This project is built with Express js, ejs and Mongodb
+## Clone
 To clone this project use the below command
 
 ## Usage
