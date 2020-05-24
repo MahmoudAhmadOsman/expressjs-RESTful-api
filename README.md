@@ -7,5 +7,5 @@ git clone https://github.com/MahmoudAhmadOsman/expressjs-RESTful-api.git
 #### Then use this command
 
 ```bash
-npm install install
+npm install
 ```
