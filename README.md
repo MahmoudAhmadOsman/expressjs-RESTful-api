@@ -1,5 +1,5 @@
 ## Express js, ejs and Mongodb
-### To clone this project use the below command
+To clone this project use the below command
 
 ## Usage
 
@@ -15,10 +15,10 @@ npm install --save
 
 
 ## Contributing
-#### Please, feel free to contrubute this and correct me if you see anything wrong about this project or if you have any sugguestions. 
+Please, feel free to contrubute this and correct me if you see anything wrong about this project or if you have any sugguestions. 
 
 
 
 ### M Website
-#### Please, visit my website
+ Please, visit my website
 [Netsansoftware](https://www.netsansoftware.com/)
