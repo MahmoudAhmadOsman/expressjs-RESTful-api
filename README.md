@@ -7,10 +7,10 @@
 git clone https://github.com/MahmoudAhmadOsman/expressjs-RESTful-api.git
 ```
 
-#### Then use this command
+## Then Install All Dependencies
 
 ```bash
-npm install
+npm install --save
 ```
 
 
