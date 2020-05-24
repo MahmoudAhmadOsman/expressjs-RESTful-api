@@ -1,9 +1,7 @@
 ## Project
 This project is built with Express js, ejs and Mongodb
 ## Clone
-To clone this project use the below command
-
-## Usage
+To clone this project use this command
 
 ```bash
 git clone https://github.com/MahmoudAhmadOsman/expressjs-RESTful-api.git
