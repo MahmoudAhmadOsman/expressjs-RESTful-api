@@ -21,4 +21,4 @@ Please, feel free to contrubute this and correct me if you see anything wrong ab
 
 ### M Website
  Please, visit my website
-[Netsansoftware](https://www.netsansoftware.com/)
+[netsansoftwarec.com](https://www.netsansoftware.com/)
