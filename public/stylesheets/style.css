@@ -85,8 +85,8 @@ body {
   margin-top: 45px;
   height: 100vh;
   display: block;
-  background-color: #381d38;
-  background-image: linear-gradient(to right, #cac9ca, #381d38);
+  /* background-color: #381d38;
+  background-image: linear-gradient(to right, #cac9ca, #381d38); */
 }
 .signup-form .input-lg {
   font-size: 13px;
@@ -121,8 +121,8 @@ body {
   height: 100vh;
 
   display: block;
-  background-color: #381d38;
-  background-image: linear-gradient(to right, #cac9ca, #381d38);
+  /* background-color: #381d38;
+  background-image: linear-gradient(to right, #cac9ca, #381d38); */
   overflow: hidden;
   position: relative;
 }

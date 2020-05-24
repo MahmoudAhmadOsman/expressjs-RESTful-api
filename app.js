@@ -8,6 +8,8 @@ var mongoose = require("mongoose");
 var methodOverride = require("method-override");
 var multer = require("multer");
 var logger = require("morgan");
+var expressValidator = require("express-validator");
+
 var slugify = require("slugify");
 
 //Bring the Database
@@ -50,6 +52,9 @@ var usersRouter = require("./routes/users");
 var galleryRouter = require("./routes/gallery");
 
 var app = express();
+
+//Put validator after app express() otherwise it will not work
+app.use(expressValidator());
 
 //1. for heruku
 const port = process.env.PORT || 5000;
