@@ -9,6 +9,7 @@ let registerSchema = new mongoose.Schema({
   email: {
     type: String,
     require: true,
+    unique: true,
   },
   username: {
     type: String,

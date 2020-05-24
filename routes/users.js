@@ -13,7 +13,7 @@ router.get("/", function (req, res, next) {
 //Get User Registeration form
 router.get("/register", function (req, res, next) {
   res.render("users/register", {
-    title: "Register New User ",
+    title: "Register ",
   });
 });
 
@@ -90,12 +90,31 @@ router.post("/add", function (req, res, next) {
 //   }
 // });
 
+// Bring passport config to here
+
+require("../config/passport")(passport);
+
+//Bring these middleware - Passport Middleware
+router.use(passport.initialize());
+router.use(passport.session());
+
 //Get login FORM
 router.get("/login", function (req, res, next) {
   // res.send("LOGIN");
   res.render("users/login", {
     title: "Login ",
   });
+});
+
+//Get Login info
+
+router.post("/login", function (req, res, next) {
+  res.send("LOGIN");
+  passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/users/login",
+    failureFlash: true,
+  })(req, res, next);
 });
 
 module.exports = router;

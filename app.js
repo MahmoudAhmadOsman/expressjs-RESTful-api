@@ -9,8 +9,8 @@ var methodOverride = require("method-override");
 var multer = require("multer");
 var logger = require("morgan");
 var expressValidator = require("express-validator");
-
 var slugify = require("slugify");
+const passport = require("passport");
 
 //Bring the Database
 var config = require("./config/database");
@@ -80,6 +80,10 @@ app.use("/users", usersRouter);
 app.use("/authors", authorRouter);
 app.use("/books", bookRouter);
 app.use("/gallery", galleryRouter);
+
+//Bring these middleware - Passport Middleware
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

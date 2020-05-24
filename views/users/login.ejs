@@ -4,10 +4,10 @@
       <div class="col-md-6 col-md-offset-4">
         <h1 class="text-info"><%= title %></h1>
         <hr />
-        <form action="/users/add">
+        <form action="/users/login">
           <div class="form-group">
-            <label for="email">Email address:</label>
-            <input type="email" class="form-control input-lg" name="email" />
+            <label for="username">Username:</label>
+            <input type="text" class="form-control input-lg" name="username" />
           </div>
           <div class="form-group">
             <label for="pwd">Password:</label>
@@ -18,7 +18,7 @@
             />
           </div>
           <div class="checkbox">
-            <label><input type="checkbox" /> Remember me</label>
+            <label><input type="checkbox" required /> Remember me</label>
           </div>
           <button type="submit" class="btn btn-info btn-lg btn-block">
             <b class="sub">Submit</b>
