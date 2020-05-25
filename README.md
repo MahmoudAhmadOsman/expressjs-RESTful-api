@@ -4,13 +4,13 @@ This project is built with Express js, ejs and Mongodb
 To clone this project use this command
 
 ```bash
-git clone https://github.com/MahmoudAhmadOsman/expressjs-RESTful-api.git
+$ git clone https://github.com/MahmoudAhmadOsman/expressjs-RESTful-api.git
 ```
 
 ## Then Install All Dependencies
 
 ```bash
-npm install --save
+$ npm install --save
 ```
 
 
