@@ -92,7 +92,7 @@ router.post("/add", function (req, res, next) {
 
 // Bring passport config to here
 
-require("../config/passport")(passport);
+// require("../config/passport")(passport);
 
 //Bring these middleware - Passport Middleware
 router.use(passport.initialize());
