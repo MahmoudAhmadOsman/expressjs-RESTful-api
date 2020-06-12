@@ -16,7 +16,7 @@ $ npm install --save
 ## Note: 
 This project is live on Heroku. So, please visit the link below and see the demo app.
 
-[Atlasbookshop](https://mahmoudosmanbooks.herokuapp.com/)
+Heroku Link:  [Atlasbookshop](https://mahmoudosmanbooks.herokuapp.com/)
 
 
 
