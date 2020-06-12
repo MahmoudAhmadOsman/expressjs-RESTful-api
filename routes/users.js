@@ -36,7 +36,10 @@ router.post("/add", function (req, res, next) {
         user: user,
       });
     } else {
+      //res.send("Thanks for registering");
       res.redirect("/users/login");
+      //After registration take the user to the thanks you or confirmation page
+      // res.redirect("/users/confirmation");
     }
   });
 });
