@@ -28,7 +28,7 @@ router.post("/add", function (req, res, next) {
     password2: req.body.password2,
   });
 
-  req.checkBody("name", "Name is required").notEmpty();
+  // req.checkBody("name", "Name is required").notEmpty();
 
   user.save((err, newUser) => {
     if (err) {
@@ -37,69 +37,16 @@ router.post("/add", function (req, res, next) {
       });
     } else {
       //res.send("Thanks for registering");
-      res.redirect("/users/login");
+      //res.redirect("/users/login");
       //After registration take the user to the thanks you or confirmation page
-      // res.redirect("/users/confirmation");
+      res.redirect("/users/confirm");
     }
   });
 });
 
-// router.post("/add", function (req, res, next) {
-
-//   const name = req.body.name;
-//   const email = req.body.email;
-//   const username = req.body.username;
-//   const password = req.body.password;
-//   const password2 = req.body.password2;
-//   req.checkBody("name", "Name is required").notEmpty();
-//   req.checkBody("email", "Email is not valid").isEmail();
-//   req.checkBody("username", "Username is required").notEmpty();
-//   req.checkBody("password", "Password is required").notEmpty();
-//   req
-//     .checkBody("password2", "Passwords do not match")
-//     .equals(req.body.password);
-
-//   //Check Errors
-//   let errors = req.validationErrors();
-//   if (errors) {
-//     res.render("users/register", {
-//       errors: errors,
-//     });
-//   } else {
-//     let newUser = new Register({
-//       name: name,
-//       email: email,
-//       username: username,
-//       password: password,
-//     });
-//     //Hash the password using bcrypt
-//     bcrypt.genSalt(10, function (err, salt) {
-//       bcrypt.hash(newUser.passport, salt, function (err, hash) {
-//         if (err) {
-//           console.log(err);
-//         }
-//         newUser.password = hash;
-
-//         newUser.save(function (err) {
-//           if (err) {
-//             console.log(err);
-//             return;
-//           } else {
-//             res.redirect("/users/login");
-//           }
-//         });
-//       });
-//     });
-//   }
-// });
-
-// Bring passport config to here
-
-// require("../config/passport")(passport);
-
 //Bring these middleware - Passport Middleware
-router.use(passport.initialize());
-router.use(passport.session());
+// router.use(passport.initialize());
+// router.use(passport.session());
 
 //Get login FORM
 router.get("/login", function (req, res, next) {
@@ -111,13 +58,20 @@ router.get("/login", function (req, res, next) {
 
 //Get Login info
 
-router.post("/login", function (req, res, next) {
-  res.send("LOGIN");
-  passport.authenticate("local", {
-    successRedirect: "/",
-    failureRedirect: "/users/login",
-    failureFlash: true,
-  })(req, res, next);
-});
+// router.post("/login", function (req, res, next) {
+//   res.send("LOGIN");
+//   passport.authenticate("local", {
+//     successRedirect: "/",
+//     failureRedirect: "/users/login",
+//     failureFlash: true,
+//   })(req, res, next);
+// });
 
+//Confirmation page
+router.get("/confirm", function (req, res, next) {
+  //res.send("Confirmation Page");
+  res.render("users/confirm", {
+    title: "Registration Confirmation",
+  });
+});
 module.exports = router;
