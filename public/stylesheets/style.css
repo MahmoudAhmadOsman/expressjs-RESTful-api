@@ -23,6 +23,9 @@ body {
 .signup-form {
   height: 1200px;
 }
+.main-content .thumbnail > img {
+  max-height: 140px;
+}
 /* End of main contnet style  */
 
 /* Start of main navigation  */
