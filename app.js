@@ -1,3 +1,4 @@
+require("dotenv");
 var createError = require("http-errors");
 var express = require("express");
 var partials = require("express-partials");
@@ -14,20 +15,17 @@ const passport = require("passport");
 
 //Bring the Database
 var config = require("./config/database");
-//2. added for Heruku
-// mongoose.connect(
-//   process.env.MONGODB_URL ||
-//     "",
-//   {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//   }
-// );
 
 mongoose.connect(config.database, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+// mongoose.connect(process.env.DATABASE_URL, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
 mongoose.set("useNewUrlParser", true);
 mongoose.set("useFindAndModify", false);
 mongoose.set("useCreateIndex", true);
@@ -36,7 +34,7 @@ let db = mongoose.connection;
 
 // Check database connection
 db.once("open", function () {
-  console.log("Connected to Mongo database");
+  console.log("Connected to MongoDB database");
 });
 
 //1st, Check for database errors
@@ -82,10 +80,6 @@ app.use("/authors", authorRouter);
 app.use("/books", bookRouter);
 app.use("/gallery", galleryRouter);
 
-//Bring these middleware - Passport Middleware
-// app.use(passport.initialize());
-// app.use(passport.session());
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
@@ -104,10 +98,5 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
-
-//3. for Heruku
-// if(process.env.NODE_ENV === 'production'){
-
-// }
 
 module.exports = app;

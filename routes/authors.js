@@ -4,30 +4,11 @@ const router = express.Router();
 
 /* Authors index */
 
-// router.get("/", async (req, res) => {
-//   // Search Author name
-//   let searchOptions = {};
-//   if (req.query != null && req.query.name !== "") {
-//     searchOptions.name = new RegExp(req.query.name, "i");
-//   }
-//   try {
-//     const authors = await Author.find(searchOptions);
-
-//     res.render("authors/index", {
-//       title: "All Authors",
-//       authors: authors,
-//       searchOptions: req.query,
-//     });
-//   } catch {
-//     res.redirect("/");
-//   }
-// });
-
 router.get("/", async (req, res) => {
   try {
     const authors = await Author.find()
       .sort({ createdAt: "desc" })
-      .limit(8)
+      .limit(10)
       .exec();
     res.render("authors/index", {
       title: "All Authors ",
@@ -39,7 +20,6 @@ router.get("/", async (req, res) => {
 });
 
 /*load new Author form*/
-
 router.get("/create", function (req, res, next) {
   res.render("authors/create", {
     title: "Add New Author ",
@@ -78,15 +58,6 @@ router.get("/:id/show", function (req, res) {
     });
   });
 });
-
-// router.get("/:slug/:id", function (req, res) {
-//   Author.find({ slug: req.params.slug }, function (err, author) {
-//     res.render("authors/show", {
-//       title: "Details of ",
-//       author: author,
-//     });
-//   });
-// });
 
 //Edit page
 router.get("/:id/edit", function (req, res) {

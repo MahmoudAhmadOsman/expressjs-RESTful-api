@@ -36,20 +36,30 @@
               <b class="text-danger">Price: $ <%= book.price %></b>
             </p>
             <p>
-              <a
+              <!-- <a
                 href="/books/<%= book.id %>/edit"
-                class="btn btn-success btn-sm"
-              >
-                <i class="fa fa-edit"><b> Edit</b></i>
-              </a>
+                class="btn btn-success btn-sm" 
+                
+              > </a> -->
+              <button type="button" class="btn btn-primary" disabled>
+
+                 <i class="fa fa-edit"><b> Edit</b></i>
+                </button>
+
+               
+             
 
             
               <form
                       action="/books/<%= book.id  %>?_method=DELETE "
                       method="POST" >
-                      <button type="submit" class="btn btn-danger btn-sm">
-                        <i class="fa fa-trash"><b> Delete</b></i>
-                    </button>
+                      <!-- <button type="submit" class="btn btn-danger btn-sm"> -->
+                        <!-- <i class="fa fa-trash"><b> Delete</b></i> -->
+                        <button type="button" class="btn btn-danger" disabled>
+                        
+                          <i class="fa fa-trash"><b> Deleete</b></i>
+                        </button>
+                    <!-- </button> -->
             </form>
             </p>
           </div>

@@ -44,10 +44,6 @@ router.post("/add", function (req, res, next) {
   });
 });
 
-//Bring these middleware - Passport Middleware
-// router.use(passport.initialize());
-// router.use(passport.session());
-
 //Get login FORM
 router.get("/login", function (req, res, next) {
   // res.send("LOGIN");
@@ -55,17 +51,6 @@ router.get("/login", function (req, res, next) {
     title: "Login ",
   });
 });
-
-//Get Login info
-
-// router.post("/login", function (req, res, next) {
-//   res.send("LOGIN");
-//   passport.authenticate("local", {
-//     successRedirect: "/",
-//     failureRedirect: "/users/login",
-//     failureFlash: true,
-//   })(req, res, next);
-// });
 
 //Confirmation page
 router.get("/confirm", function (req, res, next) {

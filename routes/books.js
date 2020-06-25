@@ -4,20 +4,14 @@ const Author = require("../models/author");
 const router = express.Router();
 const multer = require("multer");
 const path = require("path");
-const uploadPath = path.join("public", Book.coverImagaeBasePath);
-
-const imageMimeTypes = ["images/jped,", "images/jpg", "images/png"];
-const upload = multer({
-  dest: uploadPath,
-  fileFilter: (req, file, callback) => {
-    callback(null);
-  },
-});
 
 /* Book Routes */
 router.get("/", async (req, res) => {
   try {
-    const books = await Book.find().sort({ createdAt: "desc" }).limit(8).exec();
+    const books = await Book.find()
+      .sort({ createdAt: "desc" })
+      .limit(10)
+      .exec();
     res.render("books/index", {
       title: "All Books ",
       books: books,
@@ -35,16 +29,17 @@ router.get("/create", function (req, res, next) {
 });
 
 //Add or Create New Author
-router.post("/add", upload.single("coverImage"), (req, res, next) => {
-  const fileName = req.file != null ? req.file.fileName : null;
+//router.post("/add", upload.single("coverImage"), (req, res, next) =>
+router.post("/add", (req, res, next) => {
+  //const fileName = req.file != null ? req.file.fileName : null;
   const book = new Book({
     title: req.body.title,
     price: req.body.price,
     description: req.body.description,
-    publishedDate: new Date(req.body.publishedDate),
+    //publishedDate: new Date(req.body.publishedDate),
     publishedDate: req.body.publishedDate,
     description: req.body.description,
-    coverImageName: fileName,
+    //coverImageName: fileName,
   });
   book.save((err, newBook) => {
     if (err) {
@@ -95,7 +90,8 @@ router.delete("/:id", async (req, res) => {
     if (book == null) {
       res.redirect("/books");
     } else {
-      res.redirect(`/book/${book.id}`);
+      //res.redirect(`/book/${book.id}`);
+      res.redirect("/books");
     }
   }
 });
