@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
       .limit(10)
       .exec();
     res.render("authors/index", {
-      title: "All Authors ",
+      title: "Authors List ",
       authors: authors,
     });
   } catch {
